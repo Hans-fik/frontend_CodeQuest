@@ -9,6 +9,7 @@ import Profile from "./pages/Dashboard/Profile";
 import Leaderboard from "./pages/Leaderboard/Leaderboard"; 
 import ChallengePacks from "./pages/Courses/ChallengePacks";
 import ChourseList from "./pages/Courses/CoursesList";
+import { Toaster } from "sonner";
 
 
 
@@ -18,15 +19,16 @@ const App = () => {
       <div style={{ backgroundColor: "#000926" }}>
         {/* Routing halaman utama */}
         <Routes>
-          <Route path="/" element={<Home />} />           {/* Halaman Landing Page */}
-          <Route path="/login" element={<Login />} />     {/* Halaman Login */}
-          <Route path="/signup" element={<SignUp />} />   {/* Halaman Sign Up */}
-          <Route path="/about" element={<About />} />     {/* Halaman About */}
+          <Route path="/" element={<Home />} />          
+          <Route path="/login" element={<Login />} />     
+          <Route path="/signup" element={<SignUp />} />  
+          <Route path="/about" element={<About />} />     
           <Route path="/profile" element={<Profile />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/challengePacks" element={<ChallengePacks />} />
           <Route path="/chourseList" element={<ChourseList />} />
         </Routes>
+        <Toaster position="top-center" richColors />
       </div>
     </Router>
   );
