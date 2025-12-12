@@ -7,8 +7,13 @@ import SignUp from "./pages/Auth/Register";      // Halaman SignUp
 import About from "./pages/About/About";        // Halaman About
 import Profile from "./pages/Dashboard/Profile"; 
 import Leaderboard from "./pages/Leaderboard/Leaderboard"; 
-import ChallengePacks from "./pages/Courses/ChallengePacks";
+import LeaderboardPodium from "./components/shared/LeaderboardPodium"; 
+import ChallengePacks from "./pages/Quizzes/QuizCollactionList";
 import ChourseList from "./pages/Courses/CoursesList";
+import ChourseDatail from "./pages/Courses/CourseDetail";
+import QuizCollectionDetail from "./pages/Quizzes/QuizCollectionDetail";
+import QuizRunner from "./pages/Quizzes/QuizRunner";
+import QuizResultScore from "./pages/Quizzes/QuizResultScore";
 import { Toaster } from "sonner";
 
 
@@ -25,8 +30,13 @@ const App = () => {
           <Route path="/about" element={<About />} />     
           <Route path="/profile" element={<Profile />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/leaderboardPodium" element={<LeaderboardPodium />} />
           <Route path="/challengePacks" element={<ChallengePacks />} />
           <Route path="/chourseList" element={<ChourseList />} />
+          <Route path="/chourseDetail" element={<ChourseDatail />} />
+          <Route path="/quizCollectionDetail" element={<QuizCollectionDetail />} />
+          <Route path="/quizRunner" element={<QuizRunner />} />
+          <Route path="/quizResultScore" element={<QuizResultScore />} />
         </Routes>
         <Toaster position="top-center" richColors />
       </div>
